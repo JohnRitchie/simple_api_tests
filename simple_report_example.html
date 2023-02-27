@@ -253,7 +253,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>simple_report_example.html</h1>
-    <p>Report generated on 27-Feb-2023 at 22:13:16 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 27-Feb-2023 at 22:44:52 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -272,7 +272,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.9</td></tr></table>
     <h2>Summary</h2>
-    <p>16 tests ran in 4.85 seconds. </p>
+    <p>16 tests ran in 4.69 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">15 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">1 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -288,16 +288,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">XFailed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_size_format</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.29</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;tests.test_earthquake.TestEarthquake object at 0x000001A444046B08&gt;, http_object = &lt;session.HTTPSession object at 0x000001A443FECC08&gt;<br/><br/>    @allure.title(&#x27;Test size format&#x27;)<br/>    @pytest.mark.xfail(reason=&quot;The data contains a negative size&quot;)<br/>    def test_size_format(self, http_object):<br/>        _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)<br/>    <br/>&gt;       assert_that(all([0 &lt; record[&#x27;size&#x27;] &lt; 9 for record in data[&#x27;results&#x27;]])).is_true()<br/><span class="error">E       AssertionError: Expected &lt;True&gt;, but was not.</span><br/><br/>tests\test_earthquake.py:75: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">self = &lt;tests.test_earthquake.TestEarthquake object at 0x000001B84D5FE808&gt;, http_object = &lt;session.HTTPSession object at 0x000001B84D5FED08&gt;<br/><br/>    @allure.title(&#x27;Test size format&#x27;)<br/>    @pytest.mark.xfail(reason=&quot;The data contains a negative size&quot;)<br/>    def test_size_format(self, http_object):<br/>        _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)<br/>    <br/>&gt;       assert_that(all([0 &lt; record[&#x27;size&#x27;] &lt; 9 for record in data[&#x27;results&#x27;]])).is_true()<br/><span class="error">E       AssertionError: Expected &lt;True&gt;, but was not.</span><br/><br/>tests\test_earthquake.py:75: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_api_status_code</td>
-          <td class="col-duration">0.70</td>
+          <td class="col-duration">0.69</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -315,7 +315,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_data_type[timestamp-str]</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -324,7 +324,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_data_type[latitude-float]</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -333,7 +333,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_data_type[longitude-float]</td>
-          <td class="col-duration">0.23</td>
+          <td class="col-duration">0.21</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -342,7 +342,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_data_type[depth-entity_type3]</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">0.21</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -351,7 +351,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_data_type[size-entity_type4]</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">0.22</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -360,7 +360,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_data_type[quality-float]</td>
-          <td class="col-duration">0.20</td>
+          <td class="col-duration">0.26</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -387,7 +387,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_latitude_format</td>
-          <td class="col-duration">0.62</td>
+          <td class="col-duration">0.24</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -396,7 +396,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_longitude_format</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -405,7 +405,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_depth_format</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.32</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -414,7 +414,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_earthquake.py::TestEarthquake::test_quality_format</td>
-          <td class="col-duration">0.27</td>
+          <td class="col-duration">0.26</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

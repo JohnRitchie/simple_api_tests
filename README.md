@@ -20,7 +20,7 @@ python -m pytest
 
 **Starting auto tests with simple report**
 ```
-pytest --html=report.html
+python -m pytest --html=report.html
 ```
 
 **Starting auto tests with allure report**
