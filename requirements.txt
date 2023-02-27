@@ -1,4 +1,5 @@
 pytest
 requests
-responses
+allure-pytest
+assertpy
 pytest-html
