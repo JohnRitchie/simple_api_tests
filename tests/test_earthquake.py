@@ -10,6 +10,20 @@ ENDPOINT = Endpoints.EARTHQUAKE
 DATA_STRUCTURE = ['timestamp', 'latitude', 'longitude', 'depth', 'size', 'quality', 'humanReadableLocation']
 DATA_TYPE = [str, float, float, (float, int), (float, int), float, str]
 
+# Icelandic coordinates only
+MIN_LATITUDE = 62
+MAX_LATITUDE = 67
+MIN_LONGITUDE = -30
+MAX_LONGITUDE = -11
+
+# Known ranges of earthquake characteristics
+MIN_DEPTH = 0
+MAX_DEPTH = 800
+MIN_SIZE = 0
+MAX_SIZE = 9
+MIN_QUALITY = 0
+MAX_QUALITY = 100
+
 
 @allure.feature('Earthquake')
 @allure.story('Earthquake API')
@@ -53,32 +67,32 @@ class TestEarthquake:
     def test_latitude_format(self, http_object):
         _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)
 
-        assert_that(all([62 < record['latitude'] < 67 for record in data['results']])).is_true()
+        assert_that(all([MIN_LATITUDE < record['latitude'] < MAX_LATITUDE for record in data['results']])).is_true()
 
     @allure.title('Test longitude format')
     def test_longitude_format(self, http_object):
         _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)
 
-        assert_that(all([-30 < record['longitude'] < -11 for record in data['results']])).is_true()
+        assert_that(all([MIN_LONGITUDE < record['longitude'] < MAX_LONGITUDE for record in data['results']])).is_true()
 
     @allure.title('Test depth format')
     def test_depth_format(self, http_object):
         _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)
 
-        assert_that(all([0 < record['depth'] < 800 for record in data['results']])).is_true()
+        assert_that(all([MIN_DEPTH < record['depth'] < MAX_DEPTH for record in data['results']])).is_true()
 
     @allure.title('Test size format')
     @pytest.mark.xfail(reason="The data contains a negative size")
     def test_size_format(self, http_object):
         _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)
 
-        assert_that(all([0 < record['size'] < 9 for record in data['results']])).is_true()
+        assert_that(all([MIN_SIZE < record['size'] < MAX_SIZE for record in data['results']])).is_true()
 
     @allure.title('Test quality format')
     def test_quality_format(self, http_object):
         _, data = http_object.send_request(RequestTypes.GET, ENDPOINT)
 
-        assert_that(all([0 < record['quality'] < 100 for record in data['results']])).is_true()
+        assert_that(all([MIN_QUALITY < record['quality'] < MAX_QUALITY for record in data['results']])).is_true()
 
     @allure.title('Test humanReadableLocation format')
     def test_humanReadableLocation_format(self, http_object):
