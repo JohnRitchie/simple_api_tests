@@ -18,6 +18,20 @@ class HTTPSession(Session):
         except RequestException as e:
             Logger.log('Could not send {} request due to exception: {}'.format(request_type, e))
 
+    # @staticmethod
+    # @allure.step('Making request to {endpoint}')
+    # def send_request(method, endpoint, request_params=None):
+    #     try:
+    #         response = method(endpoint, params=request_params)
+    #         response.raise_for_status()
+    #         status_code = response.status_code
+    #         json_data = json.loads(response.text)
+    #         Logger.log_request(method, endpoint, request_params, status_code)
+    #         return status_code, json_data
+    #     except RequestException as e:
+    #         Logger.log('Could not send {} request due to exception: {}'.format(method, e))
+    #         return None, None
+
 
 class RequestTypes(object):
     GET = HTTPSession().get
