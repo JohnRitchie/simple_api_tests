@@ -100,3 +100,9 @@ class TestEarthquake:
 
         assert_that(all([re.match(r'^\d+,\d+ km [A|S|N|V]{1,3} af .*$', record['humanReadableLocation']) is not None
                          for record in data['results']])).is_true()
+
+# Ideas:
+# 1. Response is a JSON
+# 2. results is a list
+# 3. humanReadableLocation contains a valid geographical object of Iceland (can be obtained from another API)
+# 4. Perhaps. Test for the number of items in the 'results' list (must be greater than 0)
